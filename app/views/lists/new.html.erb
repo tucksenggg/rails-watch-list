@@ -1,5 +1,9 @@
-<%= simple_form_for @new_list do |f| =%>
-<%= f.input :name %>
-<%= f.input :photo, as: :file %>
-<%= f.button :submit %>
+<%= turbo_frame_tag :new_form do %>
+  <div class="container">
+    <%= simple_form_for @list do |f| =%>
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, class:"btn btn-primary" %>
+    <% end %>
+  </div>
 <% end %>

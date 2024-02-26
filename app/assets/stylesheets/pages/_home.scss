@@ -1,6 +1,54 @@
 // Specific CSS for your home-page
-.image {
+.image1 {
   background-image: asset-url("image1.jpg");
   background-size: cover;
-  height: 75vh;
+  background-position: center;
+  height: 60vh;
+}
+
+.image2 {
+  background-image: asset-url("image2.jpg");
+  background-size: cover;
+  height: 60vh;
+}
+
+.image3 {
+  background-image: asset-url("image3.jpg");
+  background-size: cover;
+  height: 60vh;
+}
+
+body {
+  background-image: asset-url("space.jpg");
+  background-size: cover;
+}
+
+.list-link {
+  text-decoration: none;
+  color: paleturquoise;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.list-link:hover {
+  color: hotpink;
+  font-weight: 600;
+}
+
+.list-photo {
+  opacity: 1;
+  transition: 0.3s;
+}
+.list-photo:hover {
+  opacity: 0.6;
+}
+
+h1, .brand {
+  color: white;
+}
+
+.modal-title {
+  color: black;
 }

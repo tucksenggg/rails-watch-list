@@ -2,6 +2,7 @@ class ListsController < ApplicationController
 
   def index
     @lists = List.all
+    @new_list = List.new
   end
 
   def show
@@ -10,13 +11,16 @@ class ListsController < ApplicationController
   end
 
   def new
-    @new_list = List.new
+    @list = List.new
   end
 
   def create
-    @create_list = List.new(list_params)
-    @create_list.save
-    redirect_to lists_path
+    @list = List.new(list_params)
+    if @list.save
+      redirect_to lists_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
