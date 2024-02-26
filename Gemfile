@@ -71,3 +71,4 @@ gem "simple_form"
 gem "sassc-rails"
 gem 'bullet', group: 'development'
 gem "dotenv-rails"
+gem "cloudinary"
